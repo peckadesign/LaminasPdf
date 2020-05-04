@@ -1,0 +1,73 @@
+<?php
+/**
+ * Zend Framework (http://framework.zend.com/)
+ *
+ * @link      http://github.com/zendframework/zf2 for the canonical source repository
+ * @copyright Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
+ * @license   http://framework.zend.com/license/new-bsd New BSD License
+ * @package   LaminasPdf
+ */
+
+namespace LaminasPdfTest\InternalType;
+
+use LaminasPdf\InternalType;
+
+/**
+ * \LaminasPdf\InternalType\NumericObject
+ */
+
+/**
+ * PHPUnit Test Case
+ */
+
+/**
+ * @category   Zend
+ * @package    LaminasPdf
+ * @subpackage UnitTests
+ * @group      LaminasPdf
+ */
+class NumericTest extends \PHPUnit\Framework\TestCase
+{
+    public function testPDFNumeric()
+    {
+        $intObj = new InternalType\NumericObject(100);
+        $this->assertTrue($intObj instanceof InternalType\NumericObject);
+    }
+
+    public function testPDFNumericBadArgument()
+    {
+        $this->expectException('\LaminasPdf\Exception\RuntimeException');
+        $this->expectExceptionMessage('must be numeric');
+        $intObj = new InternalType\NumericObject('some input');
+    }
+
+    public function testGetType()
+    {
+        $intObj = new InternalType\NumericObject(100);
+        $this->assertEquals($intObj->getType(), InternalType\AbstractTypeObject::TYPE_NUMERIC);
+    }
+
+    public function testToString()
+    {
+        $intObj = new InternalType\NumericObject(100);
+        $this->assertEquals($intObj->toString(), '100');
+    }
+
+    public function testToStringFloat1()
+    {
+        $intObj = new InternalType\NumericObject(100.426);
+        $this->assertEquals($intObj->toString(), '100.426');
+    }
+
+    public function testToStringFloat2()
+    {
+        $intObj = new InternalType\NumericObject(100.42633);
+        $this->assertEquals($intObj->toString(), '100.42633');
+    }
+
+    public function testToStringFloat3()
+    {
+        $intObj = new InternalType\NumericObject(-100.426);
+        $this->assertEquals($intObj->toString(), '-100.426');
+    }
+}

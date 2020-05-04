@@ -1,16 +1,12 @@
-# ZendPdf component
+# Laminas PDF component
 
-Master: [![Build Status](https://secure.travis-ci.org/zendframework/ZendPdf.png?branch=master)](http://travis-ci.org/zendframework/ZendPdf)
-
-> ## ABANDONED
->
-> This package is no longer maintained. We recommend [TCPDF](https://tcpdf.org/) as a replacement.
+Forked from ZendPdf
 
 ## Installation
 Run the command:
 
 ```bash
-composer require "zendframework/zendpdf": "2.0.*@dev"
+composer require "nmiles/laminas-pdf"
 ```
 
 At that point, follow the instructions in the documentation folder for actual

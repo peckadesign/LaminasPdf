@@ -1,32 +1,32 @@
 {
-    "name": "zendframework/zendpdf",
-    "description": "Zend Pdf Component",
-    "type": "library",
-    "license": "BSD-3-Clause",
-    "keywords": [
-        "zf2",
-        "pdf"
-    ],
-    "homepage": "http://packages.zendframework.com/",
-    "autoload": {
-        "psr-0": {
-            "ZendPdf\\": "library/"
-        }
-    },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "http://packages.zendframework.com/"
-        }
-    ],
-    "require": {
-        "php": ">=5.3.3",
-        "zendframework/zend-memory": ">=2.0.0",
-        "zendframework/zend-stdlib": ">=2.0.0"
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "2.0.x-dev"
-        }
+  "name": "nmiles/laminaspdf",
+  "description": "Laminas Pdf Component",
+  "type": "library",
+  "license": "BSD-3-Clause",
+  "keywords": [
+    "laminas",
+    "pdf"
+  ],
+  "require": {
+    "php": ">=7.3",
+    "laminas/laminas-memory": ">=2.0.0",
+    "laminas/laminas-stdlib": ">=2.0.0"
+  },
+  "require-dev": {
+    "laminas/laminas-coding-standard": "~1.0.0",
+    "phpunit/phpunit": "^5.7.27 || ^6.5.8 || ^7.1.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "LaminasPdf\\": "src/"
     }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "LaminasPdfTest\\": "test/"
+    }
+  },
+  "replace": {
+    "zendframework/zendpdf": "^2.0.0"
+  }
 }
