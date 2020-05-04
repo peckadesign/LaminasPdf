@@ -9,4 +9,4 @@ Run the command:
 composer require "nmiles/laminas-pdf"
 ```
 
-
+Now PSR-4 compliant and test suite runs
