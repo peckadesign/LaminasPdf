@@ -28,49 +28,6 @@ use LaminasPdf\ObjectFactory;
 class Created extends AbstractOutline
 {
     /**
-     * Outline title.
-     *
-     * @var string
-     */
-    protected $_title;
-
-    /**
-     * Color to be used for the outline entry’s text.
-     * It uses the DeviceRGB color space for color representation.
-     * Null means default value - black ([0.0 0.0 0.0] in RGB representation).
-     *
-     * @var \LaminasPdf\Color\Rgb
-     */
-    protected $_color = null;
-
-    /**
-     * True if outline item is displayed in italic.
-     * Default value is false.
-     *
-     * @var boolean
-     */
-    protected $_italic = false;
-
-    /**
-     * True if outline item is displayed in bold.
-     * Default value is false.
-     *
-     * @var boolean
-     */
-    protected $_bold = false;
-
-    /**
-     * Target destination or action.
-     * String means named destination
-     *
-     * Null means no target.
-     *
-     * @var \LaminasPdf\InternalStructure\NavigationTarget
-     */
-    protected $_target = null;
-
-
-    /**
      * Get outline title.
      *
      * @return string

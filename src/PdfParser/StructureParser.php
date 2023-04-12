@@ -45,6 +45,12 @@ class StructureParser
      */
     private $_pdfVersion;
 
+    /**
+     * Reference table
+     *
+     * @var \LaminasPdf\InternalType\IndirectObjectReference\ReferenceTable
+     */
+    private $_refTable;
 
     /**
      * Get length of source PDF
@@ -74,6 +80,16 @@ class StructureParser
     public function getPDFVersion()
     {
         return $this->_pdfVersion;
+    }
+
+    /**
+     * Context reference table
+     *
+     * @return \LaminasPdf\InternalType\IndirectObjectReference\ReferenceTable
+     */
+    public function getRefTable()
+    {
+        return $this->_refTable;
     }
 
     /**

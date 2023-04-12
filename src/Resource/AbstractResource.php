@@ -50,6 +50,31 @@ abstract class AbstractResource
     protected $_resource;
 
     /**
+     * @var \LaminasPdf\InternalType\IndirectObject
+     */
+    protected $_pageDictionary;
+
+    /**
+     * @var \LaminasPdf\ObjectFactory
+     */
+    protected $_objFactory;
+
+    /**
+     * @var boolean
+     */
+    protected $_attached;
+
+    /**
+     * @var \LaminasPdf\Style
+     */
+    protected $_style;
+
+    /**
+     * @var \LaminasPdf\Resource\Font\AbstractFont
+     */
+    protected $_font;
+
+    /**
      * Object constructor.
      *
      * If resource is not a \LaminasPdf\InternalType\AbstractTypeObject object,

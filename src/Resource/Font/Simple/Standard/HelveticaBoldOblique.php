@@ -93,7 +93,7 @@ class HelveticaBoldOblique extends AbstractStandard
 
         $this->_isBold = true;
         $this->_isItalic = true;
-        $this->_isMonospaced = false;
+        $this->_isMonospace = false;
 
         $this->_underlinePosition = -100;
         $this->_underlineThickness = 50;
